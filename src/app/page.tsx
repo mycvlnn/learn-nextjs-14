@@ -4,7 +4,7 @@ export default function Home() {
   return (
     <main>
       <div>
-        <Link href="/admin">Admin</Link>
+        <Link href="/about">About</Link>
       </div>
       <div>
         <Link href="/youtube">Youtube</Link>
