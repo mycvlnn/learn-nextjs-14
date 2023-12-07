@@ -1,0 +1,5 @@
+#!/usr/bin/env sh
+. "$(dirname -- "$0")/_/husky.sh"
+
+# Chúng ta có thể custom các lệnh trong lúc commit. Ở đây gọi lệnh này để chạy file .lintstagedrc.js
+npx lint-staged
