@@ -3,7 +3,7 @@
 const Youtube = () => {
   return (
     <main>
-      <h1>Youtube page</h1>
+      <h1>This is my first page</h1>
     </main>
   )
 }
