@@ -3,15 +3,18 @@ import Link from 'next/link'
 export default function Home() {
   return (
     <main>
-      <div>
-        <Link href="/blog">Blog</Link>
-      </div>
-      <div>
-        <Link href="/youtube">Youtube</Link>
-      </div>
-      <div>
-        <Link href="/tiktok">Tiktok</Link>
-      </div>
+      <h1 style={{ color: 'white', textAlign: 'center' }}>
+        Time to get started!
+      </h1>
+      <p>
+        <Link href="/meals">Meals</Link>
+      </p>
+      <p>
+        <Link href="/meals/share">Share Meal</Link>
+      </p>
+      <p>
+        <Link href="/community">Community</Link>
+      </p>
     </main>
   )
 }

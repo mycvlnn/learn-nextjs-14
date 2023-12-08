@@ -5,7 +5,7 @@ import styles from './page.module.scss'
 import classNames from 'classnames/bind'
 const cx = classNames.bind(styles)
 
-const Tiktok = () => {
+const Community = () => {
   const router = useRouter()
 
   const handleBackPage = () => {
@@ -14,10 +14,10 @@ const Tiktok = () => {
 
   return (
     <main>
-      <h1 className={cx('heading')}>Tiktok page</h1>
+      <h1 className={cx('heading')}>Community page</h1>
       <button onClick={handleBackPage}>Goback</button>
     </main>
   )
 }
 
-export default Tiktok
+export default Community

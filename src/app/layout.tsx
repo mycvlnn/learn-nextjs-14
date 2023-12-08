@@ -1,28 +1,25 @@
-import type { Metadata } from 'next'
-import { Inter } from 'next/font/google'
-// import './globals.css'
+import React from 'react'
+import './globals.css'
+import MainHeader from '@/components/main-header/main-header'
 
-const inter = Inter({ subsets: ['latin'] })
-
-export const metadata: Metadata = {
-  title: 'NextJs 14',
-  description: 'Learn NextJs 15 with Chris Lee',
+interface IProps {
+  children: React.ReactNode
 }
 
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode
-}) {
+export const metadata = {
+  title: 'NextLevel Food',
+  description: 'Delicious meals, shared by a food-loving community.',
+}
+
+const RootLayout: React.FC<IProps> = ({ children }) => {
   return (
     <html lang="en">
-      <body className={inter.className}>
-        <header>
-          <div>header component</div>
-        </header>
+      <body>
+        <MainHeader />
         {children}
-        <footer>Footer component</footer>
       </body>
     </html>
   )
 }
+
+export default RootLayout
