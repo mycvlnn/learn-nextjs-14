@@ -4,6 +4,7 @@ import styles from './page.module.scss'
 import classNames from 'classnames/bind'
 import Image from 'next/image'
 import { getMeal } from '@/lib/meals'
+import { notFound } from 'next/navigation'
 
 const cx = classNames.bind(styles)
 
@@ -16,6 +17,10 @@ interface IProps {
 const MealDetail: React.FC<IProps> = ({ params }) => {
   const meal = getMeal(params.slug)
   console.log({ meal })
+
+  if (!meal) {
+    notFound()
+  }
 
   meal.instructions = meal.instructions.replace(/\n/g, '<br>')
 
