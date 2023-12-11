@@ -16,7 +16,6 @@ interface IProps {
 
 const MealDetail: React.FC<IProps> = ({ params }) => {
   const meal = getMeal(params.slug)
-  console.log({ meal })
 
   if (!meal) {
     notFound()
