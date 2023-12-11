@@ -2,6 +2,7 @@
 
 import { redirect } from 'next/navigation'
 import { saveMeal } from './meals'
+import { revalidatePath } from 'next/cache'
 
 // Hàm kiểm tra text không hợp lệ
 function isInvalidText(text: string) {
@@ -39,5 +40,6 @@ export async function shareMeal(prevState: unknown, formData: FormData) {
   }
 
   await saveMeal(meal)
+  revalidatePath('/meals')
   redirect('/meals') // Di chuyển đến màn hình danh sách món ăn
 }
