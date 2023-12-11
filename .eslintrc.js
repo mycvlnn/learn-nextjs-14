@@ -14,5 +14,6 @@ module.exports = {
     'prettier/prettier': 'error',
     'react/react-in-jsx-scope': 'off', // Tắt quy tắc mặc định
     'no-console': ['warn', { allow: ['warn', 'error'] }], // Nếu trong trường hợp sử dụng console.log sẽ warning để tránh trường hợp quên không xoá
+    'no-unreachable': 'error',
   },
 }
