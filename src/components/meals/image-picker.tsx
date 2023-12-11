@@ -27,8 +27,8 @@ const ImagePicker: React.FC<IProps> = ({ label, name }) => {
 
     // Xử lý trong trường hợp không chọn file
     if (!file) {
-      return
       setPickedImage(null)
+      return
     }
 
     const fileReader = new FileReader()
