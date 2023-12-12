@@ -5,12 +5,33 @@ import classNames from 'classnames/bind'
 import Image from 'next/image'
 import { getMeal } from '@/lib/meals'
 import { notFound } from 'next/navigation'
+import { Metadata } from 'next'
 
 const cx = classNames.bind(styles)
 
 interface IProps {
   params: {
     slug: string
+  }
+}
+
+type PropsMetaData = {
+  params: { slug: string }
+  searchParams: { [key: string]: string | string[] | undefined }
+}
+
+export async function generateMetadata({
+  params,
+}: PropsMetaData): Promise<Metadata> {
+  const meal = getMeal(params.slug)
+
+  if (!meal) {
+    notFound()
+  }
+
+  return {
+    title: meal.title,
+    description: meal.summary,
   }
 }
 
