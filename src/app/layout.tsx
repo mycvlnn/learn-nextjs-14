@@ -1,6 +1,7 @@
 import React from 'react'
 import './globals.css'
 import MainHeader from '@/components/main-header/main-header'
+import AppProvider from '@/contexts/app-context'
 
 interface IProps {
   children: React.ReactNode
@@ -15,8 +16,10 @@ const RootLayout: React.FC<IProps> = ({ children }) => {
   return (
     <html lang="en">
       <body>
-        <MainHeader />
-        {children}
+        <AppProvider>
+          <MainHeader />
+          {children}
+        </AppProvider>
       </body>
     </html>
   )

@@ -4,6 +4,7 @@ import MealsGrid from '@/components/meals/meals-grid'
 import { getMeals } from '@/lib/meals'
 import { Suspense } from 'react'
 import MealsLoading from './loading-out'
+import Counter from '@/components/counter/counter'
 
 const MealsList = async () => {
   const meals = await getMeals()
@@ -20,6 +21,7 @@ const MealsPage = () => {
   return (
     <>
       <header className={classes.header}>
+        <Counter />
         <h1>
           Delicious meals, created{' '}
           <span className={classes.highlight}>by you</span>
